@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+@{
+    var currentController = ViewContext.RouteData.Values["controller"]?.ToString();
+    var currentAction = ViewContext.RouteData.Values["action"]?.ToString();
+
+     // If any Admin child page is active, mark the parent dropdown active
+    var isAdminActive = currentController == "Admin";
+}
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CORE_APP_AZURE</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/CORE_APP_AZURE.styles.css" asp-append-version="true" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-darkblue shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="/">MyLearning Portal</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link @(currentController == "Home" ? "active" : "")" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-light rounded-pill px-3 ms-2 @(currentAction == "Index" && currentController == "Admin" ? "active" : "")" href="/Admin">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-light rounded-pill px-3 ms-2 @(currentAction == "Courses" && currentController == "Admin" ? "active" : "")" href="/Admin/Courses">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-light rounded-pill px-3 ms-2 @(currentAction == "Users" && currentController == "Admin" ? "active" : "")" href="/Admin/Users">Users</a>
+                </li>
+                @* <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle @(isAdminActive ? "active" : "")" href="#" data-bs-toggle="dropdown">
+                        Admin
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li>
+                            <a class="dropdown-item @(currentAction == "Index" && currentController == "Admin" ? "active" : "")" href="/Admin">Dashboard</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item @(currentAction == "Courses" && currentController == "Admin" ? "active" : "")" href="/Admin/Courses">Courses</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item @(currentAction == "Users" && currentController == "Admin" ? "active" : "")" href="/Admin/Users">Users</a>
+                        </li>
+                    </ul>
+                </li> *@
+                <li class="nav-item">
+                    <a class="btn btn-light rounded-pill px-3 ms-2" href="/Account/Login">Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2025 - CORE_APP_AZURE - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+    <footer class="footer bg-darkblue text-center text-white py-3 mt-5">
+        <div class="container">
+            <p class="mb-0">© @DateTime.Now.Year MyLearning Portal | All Rights Reserved</p>
+        </div>
+    </footer>
+
+</body>
+</html>

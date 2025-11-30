@@ -1,0 +1,38 @@
+@{
+    ViewData["Title"] = "Login - MyLearning Portal";
+}
+
+<section class="d-flex align-items-center justify-content-center min-vh-100 bg-darkblue text-white">
+    <div class="card shadow-lg p-4 rounded-4 login-card">
+        <h2 class="text-center fw-bold mb-3">Welcome Back</h2>
+        <p class="text-center text-muted mb-4">Sign in to access your courses</p>
+
+        <form>
+            <div class="mb-3">
+                <label class="form-label">Email address</label>
+                <input type="email" class="form-control rounded-pill" placeholder="Enter email">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Password</label>
+                <input type="password" class="form-control rounded-pill" placeholder="Password">
+            </div>
+
+            <button type="submit" class="btn btn-light w-100 rounded-pill mb-3">Login</button>
+        </form>
+
+        <div class="text-center mb-3 text-muted">or login with</div>
+        <div class="d-flex justify-content-center gap-3">
+            <a href="#" class="btn btn-outline-light rounded-pill px-4">
+                <i class="fab fa-google"></i> Google
+            </a>
+            <a href="#" class="btn btn-outline-light rounded-pill px-4">
+                <i class="fab fa-microsoft"></i> Microsoft
+            </a>
+        </div>
+
+        <p class="text-center mt-4">
+            Don’t have an account? <a href="/Account/Register" class="text-light fw-bold">Register</a>
+        </p>
+    </div>
+</section>

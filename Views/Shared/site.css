@@ -1,0 +1,127 @@
+.login-card {
+    width: 100%;
+    max-width: 400px;
+    background: #001f3f;
+    border: none;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #0056b3;
+}
+
+.btn-outline-light:hover {
+    background-color: #ffffff20;
+}
+.course-card {
+    transition: all 0.3s ease-in-out;
+}
+
+.course-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.btn-outline-darkblue {
+    border-color: #001f3f;
+    color: #001f3f;
+}
+
+.btn-outline-darkblue:hover {
+    background-color: #001f3f;
+    color: #fff;
+}
+/* Theme Color */
+.bg-darkblue {
+    background-color: #001f3f !important;
+}
+
+/* Hero */
+.hero-section {
+    height: 70vh;
+    background: linear-gradient(to bottom right, #001f3f, #003b7a);
+}
+
+/* Fade Animations */
+.fade-in {
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.fade-up {
+    animation: fadeUp 1.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Cards */
+.feature-box {
+    background: #ffffff;
+    border-left: 5px solid #003b7a;
+    transition: 0.3s;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 20px rgba(0,0,0,0.12);
+}
+
+/* Dark Blue Theme for Admin Buttons */
+.btn-darkblue {
+    background-color: #001f3f;
+    color: #fff;
+    border: none;
+}
+
+.btn-darkblue:hover {
+    background-color: #003b7a;
+}
+
+/* Fade Animations */
+.fade-up {
+    animation: fadeUp 1.2s ease-in-out;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Card Table Spacing */
+table th, table td {
+    vertical-align: middle !important;
+}
+/* Navbar links hover effect */
+.navbar-dark .navbar-nav .nav-link {
+    color: #ffffff; /* default text color */
+    transition: all 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+    color: #ffcc00; /* highlight color on hover */
+    background-color: rgba(255, 255, 255, 0.1); /* optional subtle background */
+    border-radius: 4px; /* rounded effect */
+}
+
+/* Active page highlight */
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #ffcc00;
+    font-weight: bold;
+}
+.navbar-dark .dropdown-menu .dropdown-item:hover,
+.navbar-dark .dropdown-menu .dropdown-item:focus {
+    background-color: #003b7a; /* slightly lighter dark-blue */
+    color: #ffcc00;
+}
+.navbar-nav .nav-link,
+.dropdown-item {
+    transition: all 0.2s ease-in-out;
+}

@@ -1,0 +1,7 @@
+C:\Users\100640540\source\repos\CORE_APP_AZURE\CORE_APP_AZURE\publish\CORE_APP_AZURE.exe
+C:\Users\100640540\source\repos\CORE_APP_AZURE\CORE_APP_AZURE\publish\appsettings.Development.json
+C:\Users\100640540\source\repos\CORE_APP_AZURE\CORE_APP_AZURE\publish\appsettings.json
+C:\Users\100640540\source\repos\CORE_APP_AZURE\CORE_APP_AZURE\publish\CORE_APP_AZURE.dll
+C:\Users\100640540\source\repos\CORE_APP_AZURE\CORE_APP_AZURE\publish\CORE_APP_AZURE.deps.json
+C:\Users\100640540\source\repos\CORE_APP_AZURE\CORE_APP_AZURE\publish\CORE_APP_AZURE.runtimeconfig.json
+C:\Users\100640540\source\repos\CORE_APP_AZURE\CORE_APP_AZURE\publish\CORE_APP_AZURE.pdb

@@ -1,0 +1,158 @@
+@{
+    ViewData["Title"] = "Admin Dashboard - MyLearning Portal";
+}
+
+<section class="container-fluid py-4">
+    <div class="row g-4">
+
+        <!-- Total Courses -->
+        <div class="col-md-3 fade-up">
+            <div class="card shadow-sm p-4 rounded text-center">
+                <h5 class="fw-bold">Total Courses</h5>
+                <h2 class="display-5 text-darkblue">12</h2>
+            </div>
+        </div>
+
+        <!-- Total Users -->
+        <div class="col-md-3 fade-up">
+            <div class="card shadow-sm p-4 rounded text-center">
+                <h5 class="fw-bold">Total Users</h5>
+                <h2 class="display-5 text-darkblue">48</h2>
+            </div>
+        </div>
+
+        <!-- Active Categories -->
+        <div class="col-md-3 fade-up">
+            <div class="card shadow-sm p-4 rounded text-center">
+                <h5 class="fw-bold">Categories</h5>
+                <h2 class="display-5 text-darkblue">6</h2>
+            </div>
+        </div>
+
+        <!-- Pending Approvals -->
+        <div class="col-md-3 fade-up">
+            <div class="card shadow-sm p-4 rounded text-center">
+                <h5 class="fw-bold">Pending Approvals</h5>
+                <h2 class="display-5 text-darkblue">3</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4 g-4">
+        <!-- Manage Courses -->
+        <div class="col-md-6 fade-up">
+            <div class="card shadow-sm p-4 rounded">
+                <h5 class="fw-bold mb-3">Manage Courses</h5>
+                <a href="/Admin/Courses/Create" class="btn btn-darkblue rounded-pill mb-2">Add New Course</a>
+                <table class="table table-striped mt-3">
+                    <thead>
+                        <tr>
+                            <th>Course Name</th>
+                            <th>Category</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ASP.NET Core Fundamentals</td>
+                            <td>Programming</td>
+                            <td>Active</td>
+                            <td>
+                                <a href="#" class="btn btn-sm btn-outline-darkblue">Edit</a>
+                                <a href="#" class="btn btn-sm btn-outline-danger">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>SQL Essentials</td>
+                            <td>Database</td>
+                            <td>Active</td>
+                            <td>
+                                <a href="#" class="btn btn-sm btn-outline-darkblue">Edit</a>
+                                <a href="#" class="btn btn-sm btn-outline-danger">Delete</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Manage Users -->
+        <div class="col-md-6 fade-up">
+            <div class="card shadow-sm p-4 rounded">
+                <h5 class="fw-bold mb-3">Manage Users</h5>
+                <a href="/Admin/Users/Create" class="btn btn-darkblue rounded-pill mb-2">Add New User</a>
+                <table class="table table-striped mt-3">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John Doe</td>
+                            <td>john@example.com</td>
+                            <td>Student</td>
+                            <td>Active</td>
+                            <td>
+                                <a href="#" class="btn btn-sm btn-outline-darkblue">Edit</a>
+                                <a href="#" class="btn btn-sm btn-outline-danger">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Jane Smith</td>
+                            <td>jane@example.com</td>
+                            <td>Instructor</td>
+                            <td>Active</td>
+                            <td>
+                                <a href="#" class="btn btn-sm btn-outline-darkblue">Edit</a>
+                                <a href="#" class="btn btn-sm btn-outline-danger">Delete</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Manage Categories -->
+    <div class="row mt-4 fade-up">
+        <div class="col-12">
+            <div class="card shadow-sm p-4 rounded">
+                <h5 class="fw-bold mb-3">Manage Categories</h5>
+                <a href="/Admin/Categories/Create" class="btn btn-darkblue rounded-pill mb-2">Add New Category</a>
+                <table class="table table-striped mt-3">
+                    <thead>
+                        <tr>
+                            <th>Category Name</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Programming</td>
+                            <td>Active</td>
+                            <td>
+                                <a href="#" class="btn btn-sm btn-outline-darkblue">Edit</a>
+                                <a href="#" class="btn btn-sm btn-outline-danger">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Database</td>
+                            <td>Active</td>
+                            <td>
+                                <a href="#" class="btn btn-sm btn-outline-darkblue">Edit</a>
+                                <a href="#" class="btn btn-sm btn-outline-danger">Delete</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>

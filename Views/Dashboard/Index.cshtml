@@ -1,0 +1,65 @@
+@{
+    ViewData["Title"] = "Dashboard - MyLearning Portal";
+}
+
+<section class="container py-5">
+    <h2 class="fw-bold mb-4">Your Dashboard</h2>
+
+    <div class="row g-4">
+        <!-- Progress Chart -->
+        <div class="col-md-6 fade-up">
+            <div class="card shadow-sm p-4 rounded">
+                <h5 class="fw-bold mb-3">Learning Progress</h5>
+                <canvas id="progressChart" height="200"></canvas>
+            </div>
+        </div>
+
+        <!-- Achievements / Badges -->
+        <div class="col-md-6 fade-up">
+            <div class="card shadow-sm p-4 rounded">
+                <h5 class="fw-bold mb-3">Your Achievements</h5>
+                <div class="d-flex flex-wrap gap-3">
+                    <span class="badge bg-darkblue rounded-pill p-2">🏅 Beginner Completed</span>
+                    <span class="badge bg-darkblue rounded-pill p-2">🏆 Top Performer</span>
+                    <span class="badge bg-darkblue rounded-pill p-2">📚 SQL Mastery</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Enrolled Courses -->
+        <div class="col-12 fade-up">
+            <div class="card shadow-sm p-4 rounded">
+                <h5 class="fw-bold mb-3">Enrolled Courses</h5>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">ASP.NET Core Fundamentals - 70% Complete</li>
+                    <li class="list-group-item">SQL & Database Essentials - 50% Complete</li>
+                    <li class="list-group-item">C# Advanced Techniques - 30% Complete</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts{
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('progressChart').getContext('2d');
+        const progressChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Completed', 'In Progress', 'Pending'],
+                datasets: [{
+                    data: [40, 35, 25],
+                    backgroundColor: ['#001f3f', '#0056b3', '#8eb5e0'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { position: 'bottom' }
+                }
+            }
+        });
+    </script>
+}

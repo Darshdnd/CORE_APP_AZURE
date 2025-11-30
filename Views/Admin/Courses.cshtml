@@ -1,0 +1,49 @@
+@{
+    ViewData["Title"] = "Courses - MyLearning Portal";
+}
+
+<section class="container py-5">
+    <h2 class="fw-bold text-center mb-4">Available Courses</h2>
+
+    <div class="row g-4">
+
+        <!-- Course Card -->
+        <div class="col-md-4 fade-up">
+            <div class="card shadow-sm border-0 course-card">
+                <img src="https://source.unsplash.com/600x400/?programming,code"
+                     class="card-img-top" alt="Course Image">
+
+                <div class="card-body">
+                    <h5 class="card-title">ASP.NET Core Fundamentals</h5>
+                    <p class="card-text text-muted">Master the future of .NET development.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="badge bg-darkblue">Beginner</span>
+                        <a href="#" class="btn btn-outline-darkblue btn-sm rounded-pill">
+                            Enroll →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Duplicate below structure for more courses -->
+        <div class="col-md-4 fade-up">
+            <div class="card shadow-sm border-0 course-card">
+                <img src="https://source.unsplash.com/600x400/?database,data"
+                     class="card-img-top" alt="Course Image">
+
+                <div class="card-body">
+                    <h5 class="card-title">SQL & Database Essentials</h5>
+                    <p class="card-text text-muted">Store, query & secure data efficiently.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="badge bg-darkblue">Intermediate</span>
+                        <a href="#" class="btn btn-outline-darkblue btn-sm rounded-pill">
+                            Enroll →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

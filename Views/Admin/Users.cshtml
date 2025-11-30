@@ -1,0 +1,43 @@
+@{
+    ViewData["Title"] = "Users - Admin Panel";
+}
+
+<section class="container py-5">
+    <h2 class="fw-bold mb-4">Manage Users</h2>
+
+    <a href="#" class="btn btn-darkblue rounded-pill mb-3">Add New User</a>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John Doe</td>
+                <td>john@example.com</td>
+                <td>Student</td>
+                <td>Active</td>
+                <td>
+                    <a href="#" class="btn btn-sm btn-outline-darkblue">Edit</a>
+                    <a href="#" class="btn btn-sm btn-outline-danger">Delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Jane Smith</td>
+                <td>jane@example.com</td>
+                <td>Instructor</td>
+                <td>Active</td>
+                <td>
+                    <a href="#" class="btn btn-sm btn-outline-darkblue">Edit</a>
+                    <a href="#" class="btn btn-sm btn-outline-danger">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
