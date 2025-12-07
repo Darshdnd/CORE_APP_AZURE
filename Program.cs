@@ -1,4 +1,14 @@
+using Microsoft.FeatureManagement;
+using Microsoft.FeatureManagement.FeatureFilters;
+
 var builder = WebApplication.CreateBuilder(args);
+
+var appFeatureMgmtConnectionString = builder.Configuration["AppConfig:FeatureMgmtConnectionString"];
+
+builder.Configuration.AddAzureAppConfiguration(option =>
+{
+    option.Connect(appFeatureMgmtConnectionString).UseFeatureFlags();
+});
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -12,7 +22,8 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
-
+app.UseAzureAppConfiguration();
+app.MapGet("/", () => "App Feature Flags Connected!");
 app.UseHttpsRedirection();
 app.UseRouting();
 
